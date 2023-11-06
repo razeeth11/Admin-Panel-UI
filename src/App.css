@@ -9,5 +9,5 @@ body {
 .css-15cwhmd-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: white !important;
   background: #9fa2b442;
-  border-right : 2px solid white;
+  border-left : 2px solid white;
 }

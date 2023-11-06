@@ -4,8 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Card, Grid } from "@mui/material";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Card, Grid, Stack } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -68,7 +67,7 @@ export function VerticalTabs() {
         <Grid xs={3.5} md={2}>
           <Tabs
             orientation="vertical"
-            variant="scrollable"
+            variant={"scrollable"}
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"
@@ -87,10 +86,7 @@ export function VerticalTabs() {
         <Grid xs={8.5} md={10}>
           <Box>
             <TabPanel value={value} index={0}>
-              Item One
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              vitae.
+              <CardNew />
             </TabPanel>
             <TabPanel value={value} index={1}>
               lorem1000
@@ -110,6 +106,22 @@ export function VerticalTabs() {
           </Box>
         </Grid>
       </Grid>
+    </Box>
+  );
+}
+
+function CardNew() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+        height: "100vh",
+        overflow: "auto",
+      }}
+    >
+      
     </Box>
   );
 }
