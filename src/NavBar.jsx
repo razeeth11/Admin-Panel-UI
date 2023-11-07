@@ -150,7 +150,7 @@ export function PrimarySearchAppBar() {
           >
             Welcome, Razeeth 👋
           </Typography>
-          <Search sx={{ background: "#c2c2c2" }}>
+          <Search sx={{ border: "1px solid #c2c2c2" }}>
             <SearchIconWrapper>
               <SearchIcon sx={{ color: "grey", fontWeight: 500 }} />
             </SearchIconWrapper>

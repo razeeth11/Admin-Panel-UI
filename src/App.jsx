@@ -1,14 +1,14 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import "./App.css";
 import { PrimarySearchAppBar } from "./NavBar";
 import { VerticalTabs } from "./SideBar";
 
 function App() {
   return (
-    <>
-      <VerticalTabs />  
+    <Grid>
       <PrimarySearchAppBar />
-    </>
+      <VerticalTabs />  
+    </Grid>
   );
 }
 

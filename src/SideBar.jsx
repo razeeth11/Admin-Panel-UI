@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Card, Grid, Stack } from "@mui/material";
+import { Card, CardContent, Grid, Stack } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -86,7 +86,7 @@ export function VerticalTabs() {
         <Grid xs={8.5} md={10}>
           <Box>
             <TabPanel value={value} index={0}>
-              <CardNew />
+              <DashBoardPanel />
             </TabPanel>
             <TabPanel value={value} index={1}>
               lorem1000
@@ -110,18 +110,67 @@ export function VerticalTabs() {
   );
 }
 
-function CardNew() {
+function DashBoardPanel() {
+  const dashOne = {
+    textAlign: "center",
+    fontWeight: 600,
+    fontSize: "20px",
+  };
+
+  const dashTwo = {
+    textAlign: "center",
+    color: "#c2c2c2",
+    fontSize: "16px",
+  };
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "20px",
-        height: "100vh",
-        overflow: "auto",
-      }}
-    >
-      
-    </Box>
+    <Grid container>
+      <Grid xs={12}>
+        <Card>
+          <Grid container justifyContent="space-evenly">
+            <Grid xs={12} sm={6} md={2}>
+              <CardContent>
+                <Typography sx={dashOne} component="div">
+                  750K
+                </Typography>
+                <Typography sx={dashTwo} component="div">
+                  Sale
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid xs={12} sm={6} md={2}>
+              <CardContent>
+                <Typography sx={dashOne} component="div">
+                  7,500
+                </Typography>
+                <Typography sx={dashTwo} component="div">
+                  Cancels
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid xs={12} sm={6} md={2}>
+              <CardContent>
+                <Typography sx={dashOne} component="div">
+                  7,500
+                </Typography>
+                <Typography sx={dashTwo} component="div">
+                  Total Earned
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid xs={12} sm={6} md={2}>
+              <CardContent>
+                <Typography sx={dashOne} component="div">
+                  7,500
+                </Typography>
+                <Typography sx={dashTwo} component="div">
+                  Distributions
+                </Typography>
+              </CardContent>
+            </Grid>
+          </Grid>
+        </Card>
+      </Grid>
+    </Grid>
   );
 }
